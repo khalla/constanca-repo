@@ -1,8 +1,7 @@
-# Description: This file contains the class Grelha that is responsible for creating the grid where the particles will be "placed".
 import turtle as t
-class Grelha:
-    size = 8
-    zoomGrid=10
+
+class ResultadoSimulacao:
+
 
     grid={
         'left':0.0,
@@ -11,25 +10,30 @@ class Grelha:
         'bottom':0.0,
         'interval':0
         }
-    def __init__(self, size=4):
-        self.size = size
-        print("Start grid with size", self.size)
+    
+    # Constructor
+    def __init__(self):
+        
+        self.__desenhar_grelha()
+        print("Start grid for result")
 
-    def desenhar_grelha(self):
+    # Draw the grid
+    def __desenhar_grelha(self):
        t.clear()
        t.tracer(0, 0)
        t.speed(0)
-
+       
        t.penup()
        t.setpos(0,0)
        t.pendown()
-       
+
+
        self.grid={
-            'left':-(self.size*self.zoomGrid),
-            'right':self.size*self.zoomGrid,
-            'top':-(self.size*self.zoomGrid),
-            'bottom':self.size*self.zoomGrid,
-            'interval':self.size*2
+            'left':-(80),
+            'right':80,
+            'top':200,
+            'bottom':280,
+            'interval':1
             }
 
        x_positions=range(self.grid['left'],self.grid['right'],self.grid['interval'])
@@ -47,14 +51,4 @@ class Grelha:
             t.pendown()
             t.setpos(self.grid['right'],y)
 
-
        t.update()
-       
-
-
-       
-
-
-   
-
-
