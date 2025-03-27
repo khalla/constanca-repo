@@ -23,17 +23,27 @@ class Grelha:
        t.penup()
        t.setpos(0,0)
        t.pendown()
+
        
+       a=t.position()
+       print(a)   
+       
+       # We need this offsetVertical because the grid is displaced after we draw the grid Resultado
+       offsetVertical=0
        self.grid={
             'left':-(self.size*self.zoomGrid),
             'right':self.size*self.zoomGrid,
-            'top':-(self.size*self.zoomGrid),
-            'bottom':self.size*self.zoomGrid,
+            'top':-(self.size*self.zoomGrid)+ offsetVertical,
+            'bottom':self.size*self.zoomGrid + offsetVertical,
             'interval':self.size*2
             }
 
+       # Draw the grid
+          
        x_positions=range(self.grid['left'],self.grid['right'],self.grid['interval'])
        y_positions=range(self.grid['top'],self.grid['bottom'],self.grid['interval'])
+       print("Desenhar grelha com esquerda %s, direita %s, topo %s, baixo %s" %(
+              self.grid['left'], self.grid['right'],self.grid['top'], self.grid['bottom']))
 
        for x in x_positions:
             t.penup()

@@ -26,8 +26,8 @@ class Atomo:
         
         self.__verificarCor()
             
-        print("Inicializando átomo com tipo %s , na posição (x,y) -> (%f,%f) e com vector (x,y) -> (%f,%f) " %(
-              self.tipo, self.posicaoX, self.posicaoY,self.vectorX, self.vectorY))
+        # print("Inicializando átomo com tipo %s , na posição (x,y) -> (%f,%f) e com vector (x,y) -> (%f,%f) " %(
+        #       self.tipo, self.posicaoX, self.posicaoY,self.vectorX, self.vectorY))
         
     def __verificarCor(self):    
         if self.tipo == 'P':  
@@ -91,7 +91,8 @@ class Atomo:
         self.grafico.penup()
         self.grafico.goto(grid['left']+ self.posicaoX*self.deltaZoom *1.8,-grid['bottom']+self.posicaoY*self.deltaZoom*1.8)    
         self.grafico.pendown()
+        self.grafico.penup()
         t.update()
-        print("Movendo átomo com tipo %s , na posição (x,y) -> (%f,%f) e com vector (x,y) -> (%f,%f) " %(
-              self.tipo, self.posicaoX, self.posicaoY,self.vectorX, self.vectorY))
+       # print("Movendo átomo com tipo %s , na posição (x,y) -> (%f,%f) e com vector (x,y) -> (%f,%f) " %(
+       #       self.tipo, self.posicaoX, self.posicaoY,self.vectorX, self.vectorY))
 

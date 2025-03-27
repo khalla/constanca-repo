@@ -25,7 +25,7 @@ class Recipiente:
         
     def adicionar_particula(self, particula):
         self.particulas.append(particula)
-        print("Adicionando particula ao recipiente")
+        # print("Adicionando particula ao recipiente")
 
     def desenhar_grelha(self):
         self.grelhaInterna = gr.Grelha(self.dimensao)
