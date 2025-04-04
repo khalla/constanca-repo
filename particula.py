@@ -1,5 +1,5 @@
 import random
-import turtle as t
+# import turtle as t
 class Atomo:
     posicaoX = 0.0
     posicaoY = 0.0
@@ -7,7 +7,7 @@ class Atomo:
     vectorY = 0.0
     deltaZoom =10.0
     #isto será um objeto do tipo turtle para desenho grafico
-    grafico=None    
+    #grafico=None    
     tipo = None
     id=None
     #construtor
@@ -19,30 +19,30 @@ class Atomo:
         self.vectorX = random.randint(1, limiteDeslocamento *10)/10
         self.vectorY = random.randint(1, limiteDeslocamento *10)/10
         #criar um objeto do tipo turtle para desenho grafico
-        self.grafico = t.Turtle()
-        self.grafico.shape('square')
-        self.grafico.resizemode("user")
-        self.grafico.shapesize(0.1, 0.1, 0.1) # width, len, outline
+        # self.grafico = t.Turtle()
+        # self.grafico.shape('square')
+        # self.grafico.resizemode("user")
+        # self.grafico.shapesize(0.1, 0.1, 0.1) # width, len, outline
         
-        self.__verificarCor()
+        # self.__verificarCor()
             
         # print("Inicializando átomo com tipo %s , na posição (x,y) -> (%f,%f) e com vector (x,y) -> (%f,%f) " %(
         #       self.tipo, self.posicaoX, self.posicaoY,self.vectorX, self.vectorY))
         
-    def __verificarCor(self):    
-        if self.tipo == 'P':  
-            self.grafico.color('red')
+    # def __verificarCor(self):    
+    #     if self.tipo == 'P':  
+    #         self.grafico.color('red')
             
-        if self.tipo == 'Q':  
-            self.grafico.color('blue')
+    #     if self.tipo == 'Q':  
+    #         self.grafico.color('blue')
             
-        if self.tipo == 'R':  
-            self.grafico.color('green')
+    #     if self.tipo == 'R':  
+    #         self.grafico.color('green')
 
 
 
-    def mover(self, grid,min=0, max=8):
-        self.__verificarCor()
+    def mover(self, min=0, max=8):
+        #self.__verificarCor()
         # verificar se a particula esta dentro dos limites da grelha X > 8
         if  (self.posicaoX+ self.vectorX) > max:
             sinalX= None
@@ -88,11 +88,11 @@ class Atomo:
         self.posicaoY = self.posicaoY + self.vectorY    
 
         #mover o objecto grafico
-        self.grafico.penup()
-        self.grafico.goto(grid['left']+ self.posicaoX*self.deltaZoom *1.8,-grid['bottom']+self.posicaoY*self.deltaZoom*1.8)    
-        self.grafico.pendown()
-        self.grafico.penup()
-        t.update()
+        # self.grafico.penup()
+        # self.grafico.goto(grid['left']+ self.posicaoX*self.deltaZoom *1.8,-grid['bottom']+self.posicaoY*self.deltaZoom*1.8)    
+        # self.grafico.pendown()
+        # self.grafico.penup()
+        # t.update()
        # print("Movendo átomo com tipo %s , na posição (x,y) -> (%f,%f) e com vector (x,y) -> (%f,%f) " %(
        #       self.tipo, self.posicaoX, self.posicaoY,self.vectorX, self.vectorY))
 
