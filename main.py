@@ -25,9 +25,6 @@ indexParticula=0
 
 
 
-# Inicializacao do ecra
-#meuEcra = ecra.EcraTotal()
-
 # Inicializacao do recipiente
 recipiente = ev.Recipiente(ladoGrelha)
 # recipiente.desenhar_grelha()
@@ -43,7 +40,7 @@ def addParticulas(recipiente,tipo, numero,indexParticula, dimensao,limiteDesloca
 
 def removeParticulasR(recipiente):
     # Remove um numero de particulas do tipo ao recipiente 
-    recipiente.remover_particula(ladoGrelha/2)
+    recipiente.remover_particulas(ladoGrelha/2)
     
 
 #adicionar particulas P ao recipiente

@@ -5,7 +5,7 @@ import particula as part
 class Recipiente:
     dimensao=8
     particulas=[]
-    grelhaInterna= None
+    #grelhaInterna= None
 
     consumidosP=0
     consumidosQ=0
@@ -27,7 +27,7 @@ class Recipiente:
         self.particulas.append(particula)
         # print("Adicionando particula ao recipiente")
 
-    def remover_particula(self,size):
+    def remover_particulas(self,size):
         for i in range(len(self.particulas)):
             if self.particulas[i].tipo == "R" and self.particulas[i].posicaoX < size and self.particulas[i].posicaoY < size:
                 self.particulas.remove(self.particulas[i])
